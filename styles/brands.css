@@ -1,0 +1,30 @@
+.brands {
+  width: 100%;
+}
+.brands header {
+  margin-bottom: 50px;
+}
+
+.brands__content {
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brands__content div:not(:last-child) {
+  margin-right: 20px;
+}
+.brands__content img {
+  height: 35px;
+  width: 100px;
+}
+.brands {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 749px) {
+  .brands {
+    display: none;
+  }
+}

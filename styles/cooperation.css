@@ -1,0 +1,89 @@
+.cooperation {
+  margin-bottom: 45px;
+}
+.cooperation > header {
+  margin-bottom: 40px;
+}
+
+.cooperation__buttons {
+  margin-bottom: 35px;
+}
+
+.cooperation__buttons button {
+  padding: 15px 25px;
+  background-color: #dbdee6;
+  border-radius: 7px;
+}
+
+.cooperation__buttons span {
+  font-size: 15px;
+  color: var(--orange);
+  font-weight: bold;
+  border-bottom: 1px dotted var(--orange);
+}
+
+.cooperation__buttons .active,
+.cooperation__buttons .active > span,
+.cooperation__buttons button:hover,
+.cooperation__buttons button:hover > span {
+  background-color: transparent;
+  color: black;
+  border: none;
+}
+
+.cooperation__instructions {
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+
+.cooperation__instructions-item {
+  max-width: 250px;
+  /* flex: 1 0 25%; */
+}
+.cooperation__instructions-item.arrow {
+  min-width: 45px;
+  background: url('../img/workArrowIcon.png') center 10px no-repeat;
+  /* flex: 1 0 25%; */
+}
+
+.cooperation__instructions-ico {
+  margin-right: 10px;
+}
+
+.cooperation__instructions-item p {
+  font-size: 15px;
+}
+
+.cooperation__instructions-item span {
+  font-weight: 500;
+}
+
+@media (max-width: 980px) {
+  .cooperation > header {
+    grid-template-columns: max-content 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .cooperation__instructions {
+    flex-wrap: wrap;
+  }
+
+  .cooperation__instructions-item {
+    flex: 1 0 33%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .cooperation__instructions-ico {
+    margin-bottom: 25px;
+  }
+
+  .cooperation__instructions-item.arrow:nth-of-type(4) {
+    display: none;
+  }
+
+  .cooperation__buttons button {
+    padding: 10px 4px;
+  }
+}
