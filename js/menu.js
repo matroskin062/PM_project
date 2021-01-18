@@ -23,6 +23,7 @@ const menu = () => {
             scrollValue -= 100;
             if (scrollValue === 0) {
                 navLeft.classList.add('dis-nav');
+                navRight.classList.remove('dis-nav');
             }
             if (scrollValue !== cont.scrollWidth - cont.clientWidth) {
                 navRight.classList.remove('dis-nav');
