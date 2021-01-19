@@ -160,7 +160,7 @@
   margin-right: 15px;
 }
 
-.header__cart-button span {
+.header__cart-button [data-count] {
   color: var(--link-color);
   text-decoration: underline;
 }
