@@ -12,7 +12,6 @@ const updateCart = () => {
 
 updateCart();
 const addToCart = (price) => {
-  console.log(price);
   cart.price += price;
   cart.elements++;
   updateCart();

@@ -85,7 +85,6 @@ const items = () => {
   renderProducts(document.querySelector('.sale .crd-view'), saleItems);
 
   document.querySelectorAll('.crd-img').forEach((el, i) => {
-    console.log(i);
     if (ITEMS[i]?.img) {
       el.style.backgroundImage = `url(${ITEMS[i].img})`;
     } else {
@@ -93,7 +92,7 @@ const items = () => {
     }
   });
 
-  const cardSlider = document.querySelectorAll('.cards-slider-for-js'); // Ищет все блоки нуждающиеся в слайдере
+  const cardSlider = document.querySelectorAll('.cards-slider-for-js');
 
   let maxContent =
     document.body.clientWidth < 522
@@ -155,6 +154,8 @@ const items = () => {
       for (let card = 0; card < cards.length - maxContent; card++) {
         card < curIdx
           ? (cards[card].style.display = 'none')
+          : cards[card].classList.contains('card-prom')
+          ? (cards[card].style.display = 'block')
           : (cards[card].style.display = 'grid');
       }
     }

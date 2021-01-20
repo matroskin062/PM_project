@@ -8,10 +8,8 @@ const numbers = () => {
   const elements = document.querySelectorAll('.numbers__content-item');
   let idx = 0;
   const render = (data) => {
-    console.log(data);
     document.querySelector('.numbers__content').innerHTML = '';
-    console.log(data);
-    [...data].map((el, i) => {
+    [...data].map((el) => {
       document.querySelector('.numbers__content').innerHTML += el.outerHTML;
     });
   };

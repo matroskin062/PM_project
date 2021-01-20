@@ -2,7 +2,6 @@
 const slider = () => {
   const slides = BANNER.sort((a, b) => a.order - b.order).map((el) => {
     if (el.img && el.url) return el.img;
-    else console.log(el);
   });
 
   const container = document.querySelector('.slider-box');
@@ -69,7 +68,7 @@ const slider = () => {
   const nextBtn = document.querySelector('.slider-control.next');
   nextBtn.addEventListener('click', () => {
     clearInterval(interval);
-    console.log(interval);
+
     nextSlide();
   });
 

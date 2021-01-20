@@ -1,5 +1,4 @@
 .slider {
-  max-width: 850px;
   margin: 0 auto;
 }
 
@@ -27,7 +26,6 @@
   border-radius: 10px;
   min-height: 370px;
   position: relative;
-  min-width: 700px;
 }
 
 .slider-dots {
