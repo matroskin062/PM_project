@@ -71,26 +71,32 @@ const items = () => {
 
   const renderProducts = (target, data) => {
     target.innerHTML = '';
-    data.map((el) => {
-      if (el.type && el.date && el.url && el.currency)
-        target.innerHTML += createItem(el);
-    });
+    const items = data
+      .map((el) => {
+        if (el.type && el.date && el.url && el.currency && el.description) {
+          target.innerHTML += createItem(el);
+          return el;
+        }
+      })
+      .filter((el) => el);
+
+    target
+      .querySelectorAll('.crd-img')
+      .forEach(
+        (el, i) =>
+          (el.style.background = `url(${
+            items[i].img || 'img/no-image-icon-23499.png'
+          }) center center/contain no-repeat`)
+      );
   };
   renderProducts(document.querySelector('.new-items .crd-view'), newItems);
+
   renderProducts(
     document.querySelector('.recommend .crd-view'),
     recommendedItems
   );
 
   renderProducts(document.querySelector('.sale .crd-view'), saleItems);
-
-  document.querySelectorAll('.crd-img').forEach((el, i) => {
-    if (ITEMS[i]?.img) {
-      el.style.backgroundImage = `url(${ITEMS[i].img})`;
-    } else {
-      el.style.backgroundImage = `url('/img/no-image-icon-23499.png')`;
-    }
-  });
 
   const cardSlider = document.querySelectorAll('.cards-slider-for-js');
 
