@@ -9,7 +9,7 @@ const promotions = () => {
       return `
       <div class="card card-prom">
         <a href="" class="crd-link">${el.title}</a>
-        <div class="crd-img-prom" id="prom_1"></div>
+        <div class="crd-img-prom"></div>
         <p class="crd-price">
           ${el.description}
         </p>
@@ -35,10 +35,22 @@ const promotions = () => {
       </div>
     `;
     };
-    PROMOTIONS.map((el) => {
-      if (el.title && el.description && el.url)
+    const arr = [];
+    const proms = PROMOTIONS.map((el) => {
+      if (el.title && el.description && el.url) {
         container.innerHTML += createPromotion(el);
-    });
+        return el;
+      }
+    }).filter((el) => el);
+
+    document
+      .querySelectorAll('.crd-img-prom')
+      .forEach(
+        (el, i) =>
+          (el.style.background = `url(${
+            proms[i].img || 'img/no-image-icon-23499.png'
+          }) center center/contain no-repeat`)
+      );
   }
 };
 

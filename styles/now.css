@@ -34,6 +34,11 @@
 .now__content-item:hover p {
   color: #4673ab;
 }
+@media (max-width: 980px) {
+  .now__content-item:nth-child(1n + 4) {
+    display: none;
+  }
+}
 @media (max-width: 750px) {
   .now {
     display: none;

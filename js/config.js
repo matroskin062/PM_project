@@ -210,45 +210,46 @@ const PROMOTIONS = [
   {
     title: 'Название акции',
     description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
+    img: '/img/prom-2.png',
     url: 'https://same_url/item.html',
     time_action: '1d 2h 20m',
-  },
-  {
-    title: 'Название акции 2',
-    description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
-    url: 'https://same_url/item.html',
   },
   {
     title: 'Название акции',
     description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
+    // img: '/img/prom-1.png',
     url: 'https://same_url/item.html',
     time_action: '1d 2h 20m',
   },
   {
     title: 'Название акции 2',
     description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
-    url: 'https://same_url/item.html',
-  },
-  {
-    title: 'Название акции',
-    description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
-    url: 'https://same_url/item.html',
-    time_action: '1d 2h 20m',
-  },
-  {
-    title: 'Название акции 2',
-    description: 'IP телефон Siemens Gigaset C530A IP',
-    img: 'https://same_url.jpg',
+    img: 'img/prom-3.png',
     url: 'https://same_url/item.html',
   },
 ];
 
 const BUYING_RIGHT_NOW = [
+  {
+    title: 'Название товара',
+    img: 'https://same_url.jpg',
+    url: 'https://same_url/item.html',
+  },
+  {
+    title: 'Название товара 2',
+    img: 'https://same_url.jpg',
+    url: 'https://same_url/item.html',
+  },
+  {
+    title: 'Название товара',
+    img: 'https://same_url.jpg',
+    url: 'https://same_url/item.html',
+  },
+  {
+    title: 'Название товара 2',
+    img: 'https://same_url.jpg',
+    url: 'https://same_url/item.html',
+  },
   {
     title: 'Название товара',
     img: 'https://same_url.jpg',
