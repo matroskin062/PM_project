@@ -215,16 +215,11 @@ li:hover > a {
   height: 60px;
 }
 
-#news_1 {
-  background-image: url('../img/news_1.png');
-}
-
-#news_2 {
-  background-image: url('../img/news_2.png');
-}
-
-#news_3 {
-  background-image: url('../img/news_3.png');
+.news .img img {
+  border-radius: 7px;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
 }
 
 .news article {
@@ -238,6 +233,7 @@ li:hover > a {
 .news-img {
   width: max-content;
   text-align: center;
+  position: relative;
 }
 
 .news-txt {
@@ -252,15 +248,21 @@ li:hover > a {
 }
 
 .news-day {
+  position: absolute;
   width: 36px;
   height: 28px;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: white;
   color: #ff5816;
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
-  margin: -25% auto 0 auto;
+  left: 12px;
+  bottom: 13px;
+}
+
+.news-mounts {
+  margin-top: 12px;
 }
 
 /*****news***/
@@ -319,6 +321,12 @@ li:hover > a {
 
 .crd-prev {
   transform: rotate(180deg);
+}
+
+.crd-prev.disabled path,
+.crd-next.disabled path {
+  fill: gray;
+  cursor: not-allowed;
 }
 
 .crd-prev,
@@ -399,54 +407,7 @@ li:hover > a {
   width: 170px;
   height: 170px;
   background: no-repeat center;
-}
-
-#tel1 {
-  background-image: url('../img/tel_1.png');
-}
-
-#tel2 {
-  background-image: url('../img/tel_2.png');
-}
-
-#tel3 {
-  background-image: url('../img/tel_3.png');
-}
-
-#tel4 {
-  background-image: url('../img/tel_4.png');
-}
-
-#tel5 {
-  background-image: url('../img/tel_3.png');
-}
-
-#tel6 {
-  background-image: url('../img/tel_4.png');
-}
-
-#tel7 {
-  background-image: url('../img/tel_1.png');
-}
-
-#tel8 {
-  background-image: url('../img/tel_2.png');
-}
-
-#tel9 {
-  background-image: url('../img/tel_2.png');
-}
-
-#tel10 {
-  background-image: url('../img/tel_3.png');
-}
-
-#tel11 {
-  background-image: url('../img/tel_4.png');
-}
-
-#tel12 {
-  background-image: url('../img/tel_1.png');
+  background-size: contain;
 }
 
 .crd-link {
@@ -494,6 +455,14 @@ li:hover > a {
 
 .crd-buy:hover {
   background-color: #4673ab;
+}
+
+.crd-buy.disabled {
+  background-color: gray;
+}
+
+.crd-buy.disabled:hover {
+  cursor: no-drop;
 }
 
 .crd-more {

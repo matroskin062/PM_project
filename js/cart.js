@@ -1,36 +1,19 @@
-const cart = () => {
-  const cartCount = document.querySelector('[data-count]');
-  const cartPrice = document.querySelector('[data-price]');
+const cart = BASKET;
 
-  const cart = BASKET;
+const cartCount = document.querySelector('[data-count]');
+const cartPrice = document.querySelector('[data-price]');
+const mobileCart = document.querySelector('.header__cart-ico');
 
-  const updateCart = () => {
-    cartCount.innerText = cart.elements;
-    cartPrice.innerText = `${cart.price} ${CURRENCY}`;
-  };
-
-  const addToCart = (e) => {
-    const price = parseInt(
-      e.target.parentElement
-        .querySelector('.crd-price strong')
-        .innerText.split(' ')
-        .slice(0, 1)
-    );
-
-    cart.price += price;
-    cart.elements++;
-    updateCart();
-  };
-
-  document
-    .querySelectorAll('.crd-buy')
-    .forEach((el) => el.addEventListener('click', addToCart));
+const updateCart = () => {
+  mobileCart.setAttribute('data-value', cart.elements);
+  cartCount.innerText = cart.elements;
+  cartPrice.innerText = `${cart.price} ${CURRENCY}`;
 };
 
-const convert = (amount, from, to) => {
-  return (from / to) * amount;
+updateCart();
+const addToCart = (price) => {
+  console.log(price);
+  cart.price += price;
+  cart.elements++;
+  updateCart();
 };
-
-console.log(convert(1, CURRENCY_EXCHANGE.RUB, CURRENCY_EXCHANGE.USD));
-
-cart();

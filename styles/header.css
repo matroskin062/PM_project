@@ -260,7 +260,7 @@
   }
 
   .header__mobile .header__cart-ico::before {
-    content: '10';
+    content: attr(data-value);
     position: absolute;
     font-size: 10px;
     width: 20px;

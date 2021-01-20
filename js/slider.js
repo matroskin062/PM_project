@@ -22,7 +22,7 @@ const slider = () => {
     document.querySelector('.slider-link').href = BANNER[currentSlide].url;
   };
 
-  // changeSlide();
+  changeSlide();
 
   const jumpToSlide = (i) => {
     sliderDots[currentSlide].classList.remove('active');
@@ -59,14 +59,25 @@ const slider = () => {
     changeSlide();
   };
 
-  const nextBtn = document.querySelector('.slider-control.next');
-  nextBtn.addEventListener('click', nextSlide);
-  const prevBtn = document.querySelector('.slider-control.prev');
-  prevBtn.addEventListener('click', prevSlide);
-
+  let interval;
   setTimeout(() => {
-    setInterval(() => nextSlide(), 5000);
+    interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
   }, 5000);
+
+  const nextBtn = document.querySelector('.slider-control.next');
+  nextBtn.addEventListener('click', () => {
+    clearInterval(interval);
+    console.log(interval);
+    nextSlide();
+  });
+
+  const prevBtn = document.querySelector('.slider-control.prev');
+  prevBtn.addEventListener('click', () => {
+    clearInterval(interval);
+    prevSlide();
+  });
 };
 
 slider();

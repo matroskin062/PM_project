@@ -1,11 +1,12 @@
 .slider {
-  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .banner {
   background-color: #e3e5eb;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px 40px;
   border-radius: 10px;
   font-style: italic;
   font-size: 16px;
@@ -26,6 +27,7 @@
   border-radius: 10px;
   min-height: 370px;
   position: relative;
+  min-width: 700px;
 }
 
 .slider-dots {

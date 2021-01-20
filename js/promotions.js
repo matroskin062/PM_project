@@ -2,8 +2,11 @@ const promotions = () => {
   const container = document.querySelector('.promotion .crd-view');
   container.innerHTML = '';
 
-  const createPromotion = (el) => {
-    return `
+  if (!PROMOTIONS.length) {
+    document.querySelector('.promotion').style.display = 'none';
+  } else {
+    const createPromotion = (el) => {
+      return `
       <div class="card card-prom">
         <a href="" class="crd-link">${el.title}</a>
         <div class="crd-img-prom" id="prom_1"></div>
@@ -31,11 +34,12 @@ const promotions = () => {
         <a class="crd-more" href=${el.url}>Подробнее</a>
       </div>
     `;
-  };
-
-  PROMOTIONS.map((el) => {
-    container.innerHTML += createPromotion(el);
-  });
+    };
+    PROMOTIONS.map((el) => {
+      if (el.title && el.description && el.url)
+        container.innerHTML += createPromotion(el);
+    });
+  }
 };
 
 const parseTime = (time) => {
@@ -51,7 +55,5 @@ const parseTime = (time) => {
     minutes,
   };
 };
-
-console.log(parseTime(PROMOTIONS[0].time_action));
 
 promotions();
